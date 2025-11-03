@@ -4,6 +4,13 @@ return {
   config = function()
     local lint = require("lint")
 
+    -- Configure linters for JSON and Markdown
+    lint.linters_by_ft = {
+      json = { "jq" },       
+      -- add other filetypes here if needed
+    }
+
+    -- Create autocmd group for linting
     local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
 
     vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave" }, {
@@ -13,6 +20,7 @@ return {
       end,
     })
 
+    -- Keymap to manually trigger linting
     vim.keymap.set("n", "<leader>l", function()
       lint.try_lint()
     end, { desc = "Trigger linting for current file" })
