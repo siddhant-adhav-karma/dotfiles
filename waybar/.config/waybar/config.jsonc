@@ -60,7 +60,7 @@
     "tooltip-format-disconnected": "Disconnected",
     "interval": 3,
     "spacing": 1,
-    "on-click": "kitty -e impala"
+    "on-click": "kitty -e ~/.config/waybar/scripts/nmtui-dark.sh"
   },
   "battery": {
     "format": "{capacity}% {icon}",
@@ -85,7 +85,7 @@
     "format": "",
     "format-disabled": "󰂲",
     "format-connected": "󰂱",
-    "format-no-controller": "",
+    "format-no-controller": "󰂲",
     "tooltip-format": "Devices connected: {num_connections}",
     "on-click": "kitty -e bluetui"
   },

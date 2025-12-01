@@ -1,14 +1,4 @@
-#
-# ~/.bashrc
-#
-
-# If not running interactively, don't do anything
-[[ $- != *i* ]] && return
-
-alias ls='ls --color=auto'
-alias grep='grep --color=auto'
-
-# nmtui 
+#!/bin/sh
 export NEWT_COLORS='
 root=white,black
 roottext=lightgray,black
@@ -45,7 +35,4 @@ helpline=lightgray,black
 emptyscrollbar=lightgray,black
 fullscrollbar=brightwhite,black
 '
-
-alias vim='nvim'
-PS1='[\u@\h \W]\$ '
-. "$HOME/.cargo/env"
+exec nmtui
