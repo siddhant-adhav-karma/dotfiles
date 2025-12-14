@@ -33,3 +33,14 @@ opt.clipboard:append("unnamedplus")
 -- split window
 opt.splitright = true
 opt.splitbelow = true
+
+-- auto reload files changed outside vim
+opt.autoread = true
+
+vim.api.nvim_create_autocmd(
+  { "FocusGained", "BufEnter", "CursorHold" },
+  {
+    command = "checktime",
+  }
+)
+
