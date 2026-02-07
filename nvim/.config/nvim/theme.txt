@@ -1,1 +1,2 @@
-midnight
+catppuccin-mocha
+0.7
