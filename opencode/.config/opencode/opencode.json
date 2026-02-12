@@ -1,0 +1,161 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "opencode/kimi-k2.5-free",
+  "provider": {
+    "opencode": {
+      "models": {
+        "kimi-k2.5-free": {
+          "name": "Kimi K2.5 Free"
+        },
+        "big-pickle": {
+          "name": "Big Pickle"
+        }
+      }
+    },
+    "groq": {
+      "models": {
+        "llama-3.3-70b-versatile": {
+          "name": "Llama 3.3 70B Versatile"
+        },
+        "llama-3.1-8b-instant": {
+          "name": "Llama 3.1 8B Instant"
+        }
+      }
+    },
+    "openrouter": {
+      "models": {
+        "qwen/qwen3-coder:free": {
+          "name": "Qwen3 Coder 480B Free"
+        },
+        "deepseek/deepseek-r1-0528:free": {
+          "name": "DeepSeek R1 0528 Free"
+        },
+        "meta-llama/llama-3.3-70b-instruct:free": {
+          "name": "Llama 3.3 70B Instruct Free"
+        }
+      }
+    }
+  },
+  "agent": {
+    "architect": {
+      "mode": "subagent",
+      "model": "opencode/kimi-k2.5-free",
+      "temperature": 0.1,
+      "tools": { "write": false, "edit": false, "bash": false }
+    },
+    "api-designer": {
+      "mode": "subagent",
+      "model": "opencode/kimi-k2.5-free",
+      "temperature": 0.1,
+      "tools": { "write": true, "edit": true, "bash": false }
+    },
+    "create-code": {
+      "mode": "subagent",
+      "model": "opencode/kimi-k2.5-free",
+      "temperature": 0.2,
+      "tools": { "write": true, "edit": true, "bash": true }
+    },
+    "implement-test": {
+      "mode": "subagent",
+      "model": "opencode/kimi-k2.5-free",
+      "temperature": 0.2,
+      "tools": { "write": true, "edit": true, "bash": true }
+    },
+    "database-design": {
+      "mode": "subagent",
+      "model": "opencode/kimi-k2.5-free",
+      "temperature": 0.1,
+      "tools": { "write": true, "edit": true, "bash": true }
+    },
+    "explain-code": {
+      "mode": "subagent",
+      "model": "opencode/kimi-k2.5-free",
+      "temperature": 0.1,
+      "tools": { "write": false, "edit": false, "bash": false }
+    },
+    "review-code": {
+      "mode": "subagent",
+      "model": "opencode/kimi-k2.5-free",
+      "temperature": 0.1,
+      "tools": { "write": false, "edit": false, "bash": false }
+    },
+    "bug-hunter": {
+      "mode": "subagent",
+      "model": "opencode/kimi-k2.5-free",
+      "temperature": 0.1,
+      "tools": { "write": false, "edit": false, "bash": true }
+    },
+    "security-audit": {
+      "mode": "subagent",
+      "model": "opencode/kimi-k2.5-free",
+      "temperature": 0.1,
+      "tools": { "write": false, "edit": false, "bash": false }
+    },
+    "refactor-code": {
+      "mode": "subagent",
+      "model": "opencode/kimi-k2.5-free",
+      "temperature": 0.2,
+      "tools": { "write": true, "edit": true, "bash": true }
+    },
+    "optimize-code": {
+      "mode": "subagent",
+      "model": "opencode/kimi-k2.5-free",
+      "temperature": 0.2,
+      "tools": { "write": true, "edit": true, "bash": true }
+    },
+    "memory-profiler": {
+      "mode": "subagent",
+      "model": "opencode/kimi-k2.5-free",
+      "temperature": 0.2,
+      "tools": { "write": false, "edit": false, "bash": true }
+    },
+    "quick-fix": {
+      "mode": "subagent",
+      "model": "opencode/kimi-k2.5-free",
+      "temperature": 0.4,
+      "tools": { "write": true, "edit": true, "bash": false }
+    },
+    "devops-engineer": {
+      "mode": "subagent",
+      "model": "opencode/kimi-k2.5-free",
+      "temperature": 0.2,
+      "tools": { "write": true, "edit": true, "bash": true }
+    },
+    "dependency-manager": {
+      "mode": "subagent",
+      "model": "opencode/kimi-k2.5-free",
+      "temperature": 0.2,
+      "tools": { "write": true, "edit": true, "bash": true }
+    },
+    "git-expert": {
+      "mode": "subagent",
+      "model": "opencode/kimi-k2.5-free",
+      "temperature": 0.1,
+      "tools": { "write": false, "edit": false, "bash": true }
+    },
+    "regex-wizard": {
+      "mode": "subagent",
+      "model": "opencode/kimi-k2.5-free",
+      "temperature": 0.4,
+      "tools": { "write": true, "edit": true, "bash": false }
+    },
+    "typescript-guru": {
+      "mode": "subagent",
+      "model": "opencode/kimi-k2.5-free",
+      "temperature": 0.2,
+      "tools": { "write": true, "edit": true, "bash": false }
+    },
+    "ui-designer": {
+      "mode": "subagent",
+      "model": "opencode/kimi-k2.5-free",
+      "temperature": 0.2,
+      "tools": { "write": true, "edit": true, "bash": false }
+    },
+    "tech-writer": {
+      "mode": "subagent",
+      "model": "opencode/kimi-k2.5-free",
+      "temperature": 0.3,
+      "tools": { "write": true, "edit": true, "bash": false }
+    }
+  }
+}
