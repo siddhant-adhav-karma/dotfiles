@@ -19,7 +19,7 @@ return {
       }
       local result = vim.lsp.buf.code_action(params)
       vim.api.nvim_buf_call(0, function()
-        vim.cmd("update") 
+        vim.cmd("update")
       end)
     end
 
